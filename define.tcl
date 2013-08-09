@@ -143,7 +143,7 @@ proc aliascmd { nick userhost handle chan arg } {
     if {$cmd != "" && $cmd != $alias} {
         if {[file exists $dirname/$chan/$cmdf] == 0} {
             if {[file exists $dirname/$chan/$cmdp] == 0} {
-                putnotc $nick "Command doesn't exist.  You cannot alias a none existant command."
+                putnotc $nick "Command doesn't exist.  You cannot alias a nonexistent command."
                 return 0
             } else {
                 set cmdf $cmdp
